@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanicholus Kunda — My Web Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- NEW: defer so the DOM loads first -->
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <!-- NEW: theme switch button (JS adds behavior) -->
+    <button id="theme-toggle" type="button" aria-label="Toggle theme">Dark theme</button>
+
+    <header>
+        <h1>Vanicholus Kunda</h1>
+        <p>BSc Computer Science — Mulungushi University</p>
+
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#hobbies">My Hobbies</a>
+            <a href="#learning">My Learning Plan</a>
+            <a href="#projects">Projects &amp; Skills</a>
+            <a href="#photos">My Photos</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- NEW: hero / intro area with a call-to-action button -->
+        <section id="hero" class="content-section">
+            <h2>Welcome to My Portfolio</h2>
+            <p>
+                I am Vanicholus Kunda, a Computer Science student learning
+                to build websites. This page shows my progress, my projects
+                and what I am learning.
+            </p>
+            <a href="#projects" class="btn">View My Projects</a>
+        </section>
+
+        <section id="about" class="content-section">
+            <h2>About Me</h2>
+            <p>
+                My name is Vanicholus Kunda and I am a Computer Science student
+                at Mulungushi University. I am enthusiastic about creating
+                websites because I enjoy turning ideas into something people
+                can actually see and use in a browser. Every time I learn a new
+                HTML tag, CSS property, or JavaScript feature, I get excited to
+                try it out in a real project. This website is one of my first
+                steps toward becoming a professional web developer, and I plan
+                to keep improving it as I learn more.
+            </p>
+        </section>
+
+        <section id="hobbies" class="content-section">
+            <h2>My Hobbies</h2>
+            <ul>
+                <li>Reading technology blogs and documentation</li>
+                <li>Playing football with friends</li>
+                <li>Listening to music while coding</li>
+            </ul>
+        </section>
+
+        <section id="learning" class="content-section">
+            <h2>My Learning Plan</h2>
+            <ol>
+                <li>Master HTML5 and semantic structure.</li>
+                <li>Practise CSS layout, Flexbox and responsive design.</li>
+                <li>Learn JavaScript to add interactivity to my pages.</li>
+            </ol>
+
+            <table>
+                <caption>My weekly web learning plan</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Day</th>
+                        <th scope="col">Topic</th>
+                        <th scope="col">Practice Task</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>HTML5</td>
+                        <td>Build a new page using semantic tags.</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>CSS</td>
+                        <td>Style a section using the box model.</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>JavaScript</td>
+                        <td>Add form validation to a simple page.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- NEW: Projects & Skills section (required by Activity 3) -->
+        <section id="projects" class="content-section">
+            <h2>Projects &amp; Skills</h2>
+            <p>Here are three projects I have worked on while learning web development.</p>
+
+            <div class="project-list">
+
+                <article class="project">
+                    <h3>Personal Website</h3>
+                    <p>Built with HTML5, CSS3 and JavaScript.</p>
+                    <button class="toggle-details" type="button">Show details</button>
+                    <p class="details" hidden>
+                        This portfolio uses semantic HTML, external CSS with
+                        media queries for responsiveness, and JavaScript for
+                        interactivity.
+                    </p>
+                </article>
+
+                <article class="project">
+                    <h3>Python Calculator</h3>
+                    <p>A command-line calculator written in Python.</p>
+                    <button class="toggle-details" type="button">Show details</button>
+                    <p class="details" hidden>
+                        Handles arithmetic, input validation and loops, with
+                        try/except for bad input.
+                    </p>
+                </article>
+
+                <article class="project">
+                    <h3>JavaFX Customer Manager</h3>
+                    <p>A desktop application for managing customer records.</p>
+                    <button class="toggle-details" type="button">Show details</button>
+                    <p class="details" hidden>
+                        Uses TableView, ObservableList and file persistence to
+                        save data between sessions.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="photos" class="content-section">
+            <h2>My Photos</h2>
+
+            <!-- UPDATED: gallery now has Prev/Next buttons driven by JavaScript -->
+            <div class="gallery">
+                <figure>
+                    <img id="gallery-img"
+                         src="images/photo1.jpg"
+                         alt="My study desk with a laptop and notebook">
+                    <figcaption id="gallery-caption">
+                        My study space where I practise coding every day.
+                    </figcaption>
+                </figure>
+                <div class="gallery-controls">
+                    <button id="prev-photo" type="button">← Previous</button>
+                    <button id="next-photo" type="button">Next →</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section">
+            <h2>Contact</h2>
+            <p class="note">
+                <strong>Browser demonstration only — no message is sent.</strong>
+            </p>
+
+            <form id="contact-form" action="#" method="post" novalidate>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <span class="error" id="name-error"></span>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error" id="email-error"></span>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <span class="error" id="message-error"></span>
+
+                <button type="submit">Validate &amp; Preview</button>
+            </form>
+
+            <!-- NEW: preview area for the form summary -->
+            <div id="form-preview" aria-live="polite"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Vanicholus Kunda — Built for ICT251.</p>
+        <p>
+            Learn more at
+            <a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank" rel="noopener">
+                MDN Web Docs — Learn Web Development
+            </a>.
+        </p>
+        <!-- NEW: required footer link for the lecturer -->
+        <p>
+            <a href="https://github.com/YOUR-USERNAME/MYWEB" target="_blank" rel="noopener">
+                View Source on GitHub
+            </a>
+        </p>
+    </footer>
+
+</body>
+</html>

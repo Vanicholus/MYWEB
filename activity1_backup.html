@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanicholus Kunda — My Web Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Vanicholus Kunda</h1>
+        <p>BSc Computer Science — Mulungushi University</p>
+
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#hobbies">My Hobbies</a>
+            <a href="#learning">My Learning Plan</a>
+            <a href="#photos">My Photos</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="about" class="content-section">
+            <h2>About Me</h2>
+            <p>
+                My name is Vanicholus Kunda and I am a Computer Science student
+                at Mulungushi University. I am enthusiastic about creating
+                websites because I enjoy turning ideas into something people
+                can actually see and use in a browser. Every time I learn a new
+                HTML tag, CSS property, or JavaScript feature, I get excited to
+                try it out in a real project. This website is one of my first
+                steps toward becoming a professional web developer, and I plan
+                to keep improving it as I learn more.
+            </p>
+        </section>
+
+        <section id="hobbies" class="content-section">
+            <h2>My Hobbies</h2>
+            <ul>
+                <li>Reading technology blogs and documentation</li>
+                <li>Playing football with friends</li>
+                <li>Listening to music while coding</li>
+            </ul>
+        </section>
+
+        <section id="learning" class="content-section">
+            <h2>My Learning Plan</h2>
+            <ol>
+                <li>Master HTML5 and semantic structure.</li>
+                <li>Practise CSS layout, Flexbox and responsive design.</li>
+                <li>Learn JavaScript to add interactivity to my pages.</li>
+            </ol>
+
+            <table>
+                <caption>My weekly web learning plan</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Day</th>
+                        <th scope="col">Topic</th>
+                        <th scope="col">Practice Task</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>HTML5</td>
+                        <td>Build a new page using semantic tags.</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>CSS</td>
+                        <td>Style a section using the box model.</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>JavaScript</td>
+                        <td>Add form validation to a simple page.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="photos" class="content-section">
+            <h2>My Photos</h2>
+            <div class="gallery">
+                <figure>
+                    <img src="images/photo1.jpg" alt="My study desk with a laptop and notebook">
+                    <figcaption>My study space where I practise coding every day.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/photo2.jpg" alt="A view of the university campus">
+                    <figcaption>A view of my university campus.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/photo3.jpg" alt="A screenshot of code I wrote">
+                    <figcaption>A small project I built while learning web development.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section">
+            <h2>Contact</h2>
+            <p class="note">
+                This form is a demonstration only — no data is sent anywhere.
+            </p>
+
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="topic">Topic:</label>
+                <input type="text" id="topic" name="topic">
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Vanicholus Kunda — Built for ICT251.</p>
+        <p>
+            Learn more at
+            <a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank" rel="noopener">
+                MDN Web Docs — Learn Web Development
+            </a>.
+        </p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+/* =========================================================
+   Activity 3 additions
+   ========================================================= */
+
+/* Hero / intro area */
+#hero {
+    background: linear-gradient(135deg, #0b3d91, #1451b0);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1.5rem;
+}
+#hero h2 { color: #fff; border-bottom: none; }
+#hero p { max-width: 600px; margin: 0.5rem auto 1rem; }
+
+.btn {
+    display: inline-block;
+    background: #f5a623;
+    color: #000;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+.btn:hover, .btn:focus {
+    background: #fff;
+    color: #0b3d91;
+    outline: 2px solid #fff;
+}
+
+/* Theme toggle button */
+#theme-toggle {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    z-index: 100;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    border: 1px solid #0b3d91;
+    background: #fff;
+    color: #0b3d91;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+#theme-toggle:hover, #theme-toggle:focus {
+    background: #0b3d91;
+    color: #fff;
+}
+
+/* Projects */
+.project-list {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    margin-top: 1rem;
+}
+.project {
+    background: #fbfcfe;
+    border: 1px solid #d5dde5;
+    border-radius: 8px;
+    padding: 1rem;
+}
+.project h3 { margin-top: 0; }
+.project .details {
+    margin-top: 0.6rem;
+    padding: 0.6rem;
+    background: #eef7ee;
+    border-left: 4px solid #2e7d32;
+    border-radius: 4px;
+}
+.project .toggle-details {
+    background: #0b3d91;
+    color: #fff;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.project .toggle-details:hover,
+.project .toggle-details:focus {
+    background: #f5a623;
+    color: #000;
+}
+
+/* Gallery controls */
+.gallery-controls {
+    margin-top: 0.8rem;
+    display: flex;
+    gap: 0.6rem;
+    justify-content: center;
+    width: 100%;
+}
+.gallery-controls button {
+    background: #0b3d91;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.gallery-controls button:hover,
+.gallery-controls button:focus {
+    background: #f5a623;
+    color: #000;
+}
+
+/* Form preview */
+#form-preview {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 6px;
+    border-left: 4px solid transparent;
+}
+#form-preview:empty { display: none; }
+#form-preview.error {
+    background: #fdecea;
+    border-left-color: #c0392b;
+    color: #7a1f16;
+}
+#form-preview.success {
+    background: #eef7ee;
+    border-left-color: #2e7d32;
+    color: #1c4d1c;
+}
+.error {
+    color: #c0392b;
+    font-size: 0.9rem;
+    display: block;
+    min-height: 1.2em;
+    margin-bottom: 0.3rem;
+}
+
+/* Responsive: 2-column projects at wider widths */
+@media (min-width: 700px) {
+    .project-list { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* =========================================================
+   Dark theme (toggled via JavaScript)
+   ========================================================= */
+body.dark {
+    background: #12161c;
+    color: #e6e9ee;
+}
+body.dark header { background: #051937; }
+body.dark .content-section {
+    background: #1c232c;
+    border-color: #2b3440;
+}
+body.dark h2 { color: #7fb2ff; border-bottom-color: #7fb2ff; }
+body.dark a { color: #7fb2ff; }
+body.dark th, body.dark td { border-color: #3a4653; }
+body.dark th { background: #26303c; }
+body.dark .project {
+    background: #232b36;
+    border-color: #3a4653;
+}
+body.dark .project .details {
+    background: #1d2a1d;
+    border-left-color: #4caf50;
+    color: #d4e8d4;
+}
+body.dark button {
+    background: #1c232c;
+    color: #7fb2ff;
+    border-color: #7fb2ff;
+}
+body.dark button:hover,
+body.dark button:focus {
+    background: #7fb2ff;
+    color: #12161c;
+}
+body.dark #theme-toggle {
+    background: #1c232c;
+    color: #7fb2ff;
+    border-color: #7fb2ff;
+}
+body.dark form input, body.dark form textarea {
+    background: #1c232c;
+    color: #e6e9ee;
+    border-color: #3a4653;
+}
+body.dark #hero {
+    background: linear-gradient(135deg, #051937, #0b3d91);
+}
